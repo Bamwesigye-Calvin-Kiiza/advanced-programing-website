@@ -5,4 +5,5 @@ app_name = 'Demo_app'
 
 urlpatterns = [
     path('',views.home,name ='home'),
+    path('landingpage/',views.landingpage,name ='landingpage'),
 ]
