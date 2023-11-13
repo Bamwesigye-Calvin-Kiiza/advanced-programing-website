@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Programming</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        /* Apply opacity transition */
+        body {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            margin-left:30%;
+            margin-bottom: 50px; /* Adjust margin as needed */
+        }
+        h2{
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-left: 20px; /* Adjust margin as needed */
+        }
+
+        img {
+            border-radius:10%;
+            max-width: 100px; /* Adjust the width as needed */
+            height: auto;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .footer {
+            margin-bottom:auto; /* Push to the bottom */
+        }
+
+        .slider-container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .topic {
+            text-align: center;
+        }
+
+        .topic img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <img src="{%static 'images/advanced_prog.jpeg'%}" alt="Advanced Programming Logo">
+        <h1>Advanced Programming</h1>
+    </div>
+    <h2>Introduction to Security</h2>
+
+    <p>Security is a critical aspect of advanced programming. Here are some key points to consider:</p>
+
+    <ul>
+        <li><strong>Data Encryption:</strong> Implement robust encryption algorithms, such as AES or RSA, to safeguard sensitive data at rest and in transit. Utilize industry-standard encryption libraries like OpenSSL or Bouncy Castle for secure communication. Additionally, consider implementing end-to-end encryption for communication channels and exploring homomorphic encryption for advanced privacy-preserving computations.</li>
+    
+        <li><strong>Authentication and Authorization:</strong> Develop multi-factor authentication systems to enhance user identity verification. Implement role-based access control (RBAC) and OAuth protocols to ensure proper authorization, restricting access to resources based on user roles and permissions. Explore adaptive authentication methods, such as risk-based authentication, to dynamically adjust security measures based on user behavior and context. Implement session management best practices, including session timeouts and secure session storage mechanisms.</li>
+    
+        <li><strong>Input Validation:</strong> Enforce thorough input validation and sanitation procedures to prevent a wide range of security vulnerabilities. Employ server-side validation for user inputs, validating data types, lengths, and formats to mitigate risks such as SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF). Consider leveraging input validation libraries and frameworks for consistent and comprehensive validation across your application. Implement Content Security Policy (CSP) headers to mitigate the risks of XSS attacks.</li>
+    
+        <li><strong>Secure Coding Practices:</strong> Adhere to secure coding guidelines and best practices, such as OWASP's secure coding principles. Employ secure design patterns and avoid common pitfalls like hardcoding credentials or relying on security through obscurity. Regularly update dependencies and libraries to patch security vulnerabilities and ensure the use of the latest security features. Implement secure coding practices for APIs, including proper authentication and authorization mechanisms, input validation, and rate limiting to prevent abuse.</li>
+    
+        <li><strong>Logging and Monitoring:</strong> Establish comprehensive logging mechanisms to track system activities, including user authentication, access attempts, and critical transactions. Implement centralized log management systems for real-time monitoring and analysis. Set up monitoring systems using tools like Prometheus or ELK Stack to detect and respond promptly to security incidents. Integrate anomaly detection mechanisms to identify unusual patterns in user behavior or system activity, potentially indicating a security threat. Regularly review and analyze logs as part of proactive security measures.</li>
+    
+        <li><strong>Regular Security Audits:</strong> Conduct regular security audits, including penetration testing and code reviews, to identify and address potential vulnerabilities. Engage external security experts to perform ethical hacking and evaluate the robustness of your system. Stay informed about the latest security threats by participating in the security community, subscribing to vulnerability databases, and applying timely updates and patches. Implement a bug bounty program to encourage responsible disclosure of security vulnerabilities by external researchers. Establish incident response plans and conduct tabletop exercises to ensure a coordinated and effective response to security incidents.</li>
+    </ul>
+    
+    <p>By prioritizing security in your programming practices, you contribute to the creation of robust and resilient software applications.</p>
+
+    <div class="slider-container">
+        <!-- Slick Slider -->
+        <div class="slider">
+        <div class="topic">
+            <img src="{%static 'images/topic1_image.jpeg'%}" alt="Topic 1 Image">
+            <h3>Topic 1</h3>
+            <p>Description of Topic 1.</p>
+        </div>
+
+        <div class="topic">
+            <img src="{%static 'images/topic2_image.png'%}" alt="Topic 2 Image">
+            <h3>Topic 2</h3>
+            <p>Description of Topic 2.</p>
+        </div>
+
+        <div class="topic">
+            <img src="{%static 'images/topic3_image.jpeg'%}" alt="Topic 3 Image">
+            <h3>Topic 3</h3>
+            <p>Description of Topic 3.</p>
+        </div>
+
+        <div class="topic">
+            <img src="{%static 'images/topic4_image.png'%}" alt="Topic 4 Image">
+            <h3>Topic 4</h3>
+            <p>Description of Topic 4.</p>
+        </div>
+    </div>
+</div>
+
+    <div class="footer">
+        <p>Compiled by Calvin</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        // Initialize Slick Slider
+        $(document).ready(function(){
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                variableWidth: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            centerMode: false,
+                            variableWidth: false,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
