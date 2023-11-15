@@ -7,3 +7,6 @@ def home (request):
 
 def landingpage (request):
     return render(request,'Demo_app/landingpage.html',{})
+
+def roadmap(request):
+    return render(request,'Demo_app/roadmap.html',{})
