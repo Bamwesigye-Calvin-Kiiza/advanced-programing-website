@@ -104,6 +104,9 @@
                   <li><a class="dropdown-item" href="#">Topic 3</a></li>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'Demo_app:comment'%}">comments</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -160,7 +163,9 @@
         </div>
     </div>
 </div>
-
+<div class="b">
+    <center><a href="{%url 'Demo_app:addcomment'%}" ><button class="btn btn-sm btn-info" >Add comment</button></a></center> 
+</div> 
     <div class="footer">
         <p>Compiled by Calvin</p>
     </div>
